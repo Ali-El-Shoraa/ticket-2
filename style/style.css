@@ -1,0 +1,118 @@
+/* font google  Montserrat*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+
+/* font google  Inter*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+/* font google  Open Sans*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap");
+
+/* header component */
+@import url("./header.css");
+
+/* ticket component */
+@import url("./ticket.css");
+
+/* chart component */
+@import url("./chart.css");
+
+/* table component */
+@import url("./table.css");
+
+/* new-ticket component */
+@import url("./new-ticket.css");
+
+/* start global rules */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* font from folder fonts */
+@font-face {
+  font-family: "Neo sans";
+  src: url("../fonts/alfont_com_AlFont_com_Neo-Sans-W23.ttf") format("truetype");
+}
+
+.main {
+  background: #f3f5f7;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+img {
+  max-width: 100%;
+}
+
+svg {
+  width: 100%;
+  max-width: 100%;
+}
+/* end global rules */
+
+/*
+
+start ticket-chart 
+ticket-chart have to component 
+1-ticket 
+2-chart 
+
+*/
+
+.ticket-chart {
+  padding-top: 15px;
+}
+
+.ticket-chart .container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .ticket-chart .container {
+    flex-direction: column;
+  }
+}

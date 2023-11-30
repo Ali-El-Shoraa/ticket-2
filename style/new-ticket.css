@@ -1,0 +1,231 @@
+.new-ticket {
+  margin: 25px 0;
+}
+
+.new-ticket .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .new-ticket .container {
+    align-items: flex-end;
+  }
+}
+
+.new-ticket .left {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+@media (max-width: 767px) {
+  .new-ticket .left {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 374px) {
+  .new-ticket .left {
+    margin-right: 10px;
+  }
+}
+
+.new-ticket .left .btn-ticket {
+  color: #fcfcfc;
+  text-align: center;
+  font-family: "Neo sans", sans-serif;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background-color: #8a74f9;
+}
+
+@media (max-width: 374px) {
+  .new-ticket .left .btn-ticket {
+    font-size: 10px;
+  }
+}
+
+.new-ticket .left .active {
+  color: #9c9d9f;
+  font-family: "Neo Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+/* right */
+
+.new-ticket .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media (max-width: 767px) {
+  .new-ticket .right {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+}
+
+.new-ticket .right .btns {
+  display: flex;
+  gap: 8px;
+}
+
+@media (max-width: 374px) {
+  .new-ticket .right .btns {
+    align-items: flex-end;
+  }
+}
+
+.new-ticket .right button {
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+@media (max-width: 374px) {
+  .new-ticket .right button {
+    font-size: 10px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.new-ticket .right button img {
+  width: 16px;
+  height: 16px;
+}
+
+.new-ticket .right .input {
+  position: relative;
+}
+
+.new-ticket .right .input input {
+  border-radius: 8px;
+  border: none;
+  height: 36px;
+  max-width: 100%;
+  padding: 10px 35px;
+  outline: none;
+  direction: rtl;
+}
+
+@media (max-width: 767px) {
+  .new-ticket .right .input input {
+    width: 130px;
+  }
+}
+
+@media (max-width: 370px) {
+  .new-ticket .right .input input {
+    width: 120px;
+    padding: 10px 30px;
+  }
+}
+
+.new-ticket .right .input input::placeholder {
+  color: rgba(146, 161, 173, 0.4);
+  font-family: "Neo Sans", sans-serif;
+  font-size: 10px;
+}
+
+.new-ticket .right .input .search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.new-ticket .right span {
+  color: #1c1c28;
+  font-family: "Neo Sans", sans-serif;
+  font-size: 16px;
+}
+
+/* 
+btn switch
+*/
+
+.form-switch {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-switch i {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.5rem;
+  width: 46px;
+  height: 26px;
+  background-color: #e6e6e6;
+  border-radius: 23px;
+  vertical-align: text-bottom;
+  transition: all 0.3s linear;
+}
+
+.form-switch i::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 42px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 11px;
+  transform: translate3d(-2px, 2px, 0) scale3d(1, 1, 1);
+  transition: all 0.25s linear;
+}
+
+.form-switch i::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+  transform: translate3d(-2px, 2px, 0);
+  transition: all 0.2s ease-in-out;
+}
+
+.form-switch:active i::after {
+  width: 28px;
+  transform: translate3d(-2px, 2px, 0);
+}
+
+.form-switch:active input:checked + i::after {
+  transform: translate3d(-16px, 2px, 0);
+}
+
+.form-switch input {
+  display: none;
+}
+
+.form-switch input:checked + i {
+  background-color: #8a74f9;
+}
+
+.form-switch input:checked + i::before {
+  transform: translate3d(-18px, 2px, 0) scale3d(0, 0, 0);
+}
+
+.form-switch input:checked + i::after {
+  transform: translate3d(-22px, 2px, 0);
+}
